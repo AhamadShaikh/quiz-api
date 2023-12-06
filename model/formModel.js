@@ -16,7 +16,7 @@ const formEditSchema = new mongoose.Schema({
             cloze_preview: { type: String, required: true },
             cloze_question: { type: String, required: true },
             cloze_media: { type: String, required: true },
-            cloze_options: [{ type: String, required: true }]
+            cloze_options: []
         }
     ],
     comprehension: [
@@ -26,7 +26,7 @@ const formEditSchema = new mongoose.Schema({
             comprehension_passage: { type: String, required: true },
             comprehension_media: { type: String, required: true },
             comprehension_questions: { type: String, required: true },
-            comprehension_options: [{ type: String, required: true }],
+            comprehension_options: [],
         }
     ]
 })
