@@ -1,35 +1,40 @@
 const { default: mongoose } = require("mongoose");
 
 const formEditSchema = new mongoose.Schema({
-    categorize: [
+    "categorize": [
         {
-            categorize_points: { type: Number, required: true },
-            categorize_description: { type: String, required: true },
-            categorize_media: { type: String, required: true },
-            category: [{ type: String, required: true }],
-            itemsAndBelongsTo: []
+            "categorize_points": Number,
+            "categorize_description": String,
+            "categorize_media": String,
+            "category": [String],
+            "itemsAndBelongsTo": [
+                {
+                    "[item_content]": "[belongsTo_content]"
+                }
+            ]
         }
     ],
-    cloze: [
+    "cloze": [
         {
-            cloze_points: { type: Number, required: true },
-            cloze_preview: { type: String, required: true },
-            cloze_question: { type: String, required: true },
-            cloze_media: { type: String, required: true },
-            cloze_options: []
+            "cloze_points": Number,
+            "cloze_preview": String,
+            "cloze_question": String,
+            "cloze_media": String,
+            "cloze_options": [String]
         }
     ],
-    comprehension: [
+    "comprehension": [
         {
-            comprehension_points: { type: Number, required: true },
-            comprehension_description: { type: String, required: true },
-            comprehension_passage: { type: String, required: true },
-            comprehension_media: { type: String, required: true },
-            comprehension_questions: { type: String, required: true },
-            comprehension_options: [],
+            "comprehension_points": Number,
+            "comprehension_description": String,
+            "comprehension_passage": String,
+            "comprehension_media": String,
+            "comprehension_questions": String,
+            "comprehensionOptions": [String]
         }
     ]
-})
+}
+)
 
 const Form = mongoose.model("formdata", formEditSchema)
 
