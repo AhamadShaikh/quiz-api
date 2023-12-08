@@ -18,7 +18,7 @@ const connection = async () => {
 }
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://admirable-beignet-3a2fa1.netlify.app/",
     credentials: true
 }));
 
